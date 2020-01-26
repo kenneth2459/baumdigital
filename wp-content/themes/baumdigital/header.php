@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8" />
-	<title>Nexa devs</title>
+	<title>Baum Digital</title>
 	<link rel="stylesheet" href="<?php echo PATH ?>/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
 	
