@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <section>
-	<div class="container">
+	<div class="contianer">
 		<div class="row">
 			<div class="col-md-12">
 				<?php while(have_posts()) : the_post() ?> 
@@ -8,11 +8,10 @@
 					<?php the_content(); ?>
 					<div class="datos padding-bottom-lg padding-top-lg">
 						<div class="row">
-							<div class="col-md-6">correo: <?php the_field('correo_electrónico'); ?></div>
-							<div class="col-md-6">Teléfono: <?php the_field('telefono'); ?></div>
+							<div class="col-md-4">Correo: <?php the_field('correo_electrónico'); ?></div>
+							<div class="col-md-4">Teléfono: <?php the_field('telefono'); ?></div>
 						</div>
 					</div>
-					<?php //print_r($relacion); ?>
 				<?php endwhile; ?>
 			</div>
 		</div>
