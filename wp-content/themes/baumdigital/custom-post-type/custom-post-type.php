@@ -33,19 +33,95 @@ function register_custom_types() {
 		'menu_position'      => null,
 		'show_in_menu'       => true,
 		'show_in_nav_menus'  => true,
-		//'taxonomies'         => array('category'),	
+		'taxonomies'         => array('category'),	
 		'rewrite'            => array('slug' => 'festivales'), 
-		'supports'           => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields', 'page-attributes' ),
+		'supports'           => array('title', 'editor', 'excerpt', 'thumbnail', 'custom-fields' ),
 		'has_archive'        => true,
 	  );
 
 	  register_post_type( 'festivales' , $args_festivales );
+	  
+	  
+	  
+	  $labels_eventos = array(
+		'name' => _x('Eventos', 'post type general name'),
+		'singular_name' => _x('Eventos', 'post type singular name'),
+		'all_items' => __('Ver todos los Eventos'),
+		'add_new' => _x('Agregar nuevo', 'Eventos'),
+		'add_new_item' => __('Agregar nuevo Eventos'),
+		'edit_item' => __('Editar Eventos'),
+		'new_item' => __('Nuevo Eventos'),
+		'view_item' => __('Ver Eventos'),
+		'search_items' => __('Buscar Eventos'),
+		'not_found' =>  __('No hay Eventos'),
+		'not_found_in_trash' => __('No hay Eventos en la papelera de reciclaje'),
+		'parent_item_colon' => ''
+	);
+
+	$args_eventos = array(
+		'labels'             => $labels_eventos,
+		'description'        => 'Eventos',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'query_var'          => true,
+		'menu_icon'          => null,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'hierarchical'       => true,
+		'menu_position'      => null,
+		'show_in_menu'       => true,
+		'show_in_nav_menus'  => true,
+		'taxonomies'         => array('category'),	
+		'rewrite'            => array('slug' => 'eventos'), 
+		'supports'           => array('title', 'editor' ),
+		'has_archive'        => true,
+	  );
+
+	  register_post_type( 'eventos' , $args_eventos );
+	  
+	  $labels_artistas = array(
+		'name' => _x('Artistas', 'post type general name'),
+		'singular_name' => _x('Artistas', 'post type singular name'),
+		'all_items' => __('Ver todos los Artistas'),
+		'add_new' => _x('Agregar nuevo', 'Artistas'),
+		'add_new_item' => __('Agregar nuevo Artistas'),
+		'edit_item' => __('Editar Artistas'),
+		'new_item' => __('Nuevo Artistas'),
+		'view_item' => __('Ver Artistas'),
+		'search_items' => __('Buscar Artistas'),
+		'not_found' =>  __('No hay Artistas'),
+		'not_found_in_trash' => __('No hay Artistas en la papelera de reciclaje'),
+		'parent_item_colon' => ''
+	);
+
+	$args_artistas = array(
+		'labels'             => $labels_artistas,
+		'description'        => 'Artistas',
+		'public'             => true,
+		'publicly_queryable' => true,
+		'show_ui'            => true,
+		'query_var'          => true,
+		'menu_icon'          => null,
+		'rewrite'            => true,
+		'capability_type'    => 'post',
+		'hierarchical'       => true,
+		'menu_position'      => null,
+		'show_in_menu'       => true,
+		'show_in_nav_menus'  => true,
+		'taxonomies'         => array('category'),	
+		'rewrite'            => array('slug' => 'artistas'), 
+		'supports'           => array('title', 'editor' ),
+		'has_archive'        => true,
+	  );
+
+	  register_post_type( 'artistas' , $args_artistas );
 
 
 	flush_rewrite_rules();
 }
 
-add_action( 'init', 'eventos_artista_taxonomias', 0 );  
+/*add_action( 'init', 'eventos_artista_taxonomias', 0 );  
 
 
 function eventos_artista_taxonomias() {
@@ -96,5 +172,5 @@ function eventos_artista_taxonomias() {
   
   
   
-}
+}*/
 ?>
